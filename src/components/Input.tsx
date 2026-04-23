@@ -7,16 +7,17 @@ interface InputProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export function Input({ type,
+export function Input({
+  type,
   placeholder,
   name,
   text,
   value,
-  onChange,}: InputProps) {
-    
+  onChange,
+}: InputProps) {
   return (
     <div className="flex flex-col w-full max-w-[340px]">
-      <label className="mt-6 text-sm" htmlFor={name}>
+      <label className="mt-6 text-sm text-[var(--muted)]" htmlFor={name}>
         {text}
       </label>
 
@@ -26,7 +27,13 @@ export function Input({ type,
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full p-2 border rounded-md"
+        className="
+          w-full p-2 rounded-md mt-1
+          bg-[var(--bg-input)]
+          text-[var(--text)]
+          border border-gray-600
+          outline-none
+        "
       />
     </div>
   );
