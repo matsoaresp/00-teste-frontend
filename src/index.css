@@ -2,23 +2,27 @@
 @import "tailwindcss";
 
 :root {
-  --bg-body: #111828;
-  --bg-card: #202938;
-  --bg-input: #111828;
-  --text: #f1f5f9;
-  --muted: #94a3b8;
+  --bg-body: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-input: #f8fafc;
+  --icon-bg: #2563EA;
+  --text: #1e293b;
+  --muted: #64748b;
   --primary: #2563ea;
   --font-sans: 'Nunito', sans-serif;
   --font-mono: monospace;
+  --icon-shadow: 0 10px 25px rgba(37, 99, 234, 0.3);
 }
 
 html.dark {
   --bg-body: #111828;
   --bg-card: #202938;
   --bg-input: #111828;
+  --icon-bg: #1f2937;
   --text: #f1f5f9;
+  --muted: #94a3b8;
+  --icon-shadow: none;
 }
-
 
 * {
   box-sizing: border-box;
