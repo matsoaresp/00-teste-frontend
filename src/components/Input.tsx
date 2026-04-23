@@ -1,11 +1,19 @@
 interface InputProps {
+  type: string;
+  placeholder: string;
+  name: string;
   text: string;
-  type?: string;
-  name?: string;
-  placeholder?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export function Input({ text, type = "text", name, placeholder }: InputProps) {
+export function Input({ type,
+  placeholder,
+  name,
+  text,
+  value,
+  onChange,}: InputProps) {
+    
   return (
     <div className="flex flex-col w-full max-w-[340px]">
       <label className="mt-6 text-sm" htmlFor={name}>
@@ -13,11 +21,12 @@ export function Input({ text, type = "text", name, placeholder }: InputProps) {
       </label>
 
       <input
-        id={name}
+        type={type}
         name={name}
         placeholder={placeholder}
-        type={type}
-        className="h-10 w-full pl-4 rounded-md border border-gray-200  focus:border-[#2563EA] outline-none"
+        value={value}
+        onChange={onChange}
+        className="w-full p-2 border rounded-md"
       />
     </div>
   );

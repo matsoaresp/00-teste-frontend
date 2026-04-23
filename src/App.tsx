@@ -1,10 +1,11 @@
+import { ToastContainer } from 'react-toastify'
 import { Form } from './components/Form'
 import './index.css'
 function App() {
   return (
     <>
-      <Form>
-      </Form>
+    <ToastContainer />
+      <Form/>
     </>
   )
 }

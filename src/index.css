@@ -2,13 +2,25 @@
 @import "tailwindcss";
 
 :root {
+  --bg-body: #111828;
+  --bg-card: #202938;
+  --bg-input: #111828;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --primary: #2563ea;
   --font-sans: 'Nunito', sans-serif;
   --font-mono: monospace;
 }
 
+html.dark {
+  --bg-body: #111828;
+  --bg-card: #202938;
+  --bg-input: #111828;
+  --text: #f1f5f9;
+}
 
 
 * {
-    box-sizing: border-box;
-    font-family: var(--font-sans);
+  box-sizing: border-box;
+  font-family: var(--font-sans);
 }
